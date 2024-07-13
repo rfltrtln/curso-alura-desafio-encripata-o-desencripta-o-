@@ -1,0 +1,21 @@
+body{
+    font-family: "Times New Roman";
+    background-color: black;
+}
+p{
+  
+    text-align: justify;
+    font-family: "Crinsom Text";
+    background-color: black;
+    color: rgb(22, 238, 15);
+    text-size-adjust: 50px;
+}
+Submit {
+
+    width: 320x;
+    height: 95PX;
+    background-color: white;
+    position: fixed;
+    top: 100px;
+
+         }  

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Texto Inserido em JavaScript</title>
+    <style>
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #0e0d0d;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="textoInput">Digite um texto:</label>
+        <input type="text" id="textoInput">
+        <button onclick="encriptar()">Encriptar</button>
+        <button onclick="copiarTexto()">Copiar Texto</button>
+
+        <div id="textoEncriptado"></div>
+
+    </div>
+    
+    <script>
+        function encriptar() {
+            // Obter o valor inserido no campo de texto
+            var textoInserido = document.getElementById('textoInput').value;
+
+            // Armazenar o texto em uma variável JavaScript
+            var textoArmazenado = textoInserido;
+
+    const stringOriginal = textoArmazenado;
+    const stringA = stringOriginal.replace(/a/g, "ai");
+    const stringE = stringA.replace(/e/g, "enter");
+    const stringI = stringE.replace(/i/g, "imes");
+    const stringO = stringI.replace(/o/g, "ober");
+    const stringUe = stringO.replace(/u/g, "ufat");
+
+            // Exibir o texto na página HTML
+            var textoExibidoElement = document.getElementById('textoEncriptado');
+            textoExibidoElement.textContent = "Texto Encriptado: " + stringUe;
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+    </script>
+
+<div class="container">
+    <label for="textoInput">Digite um texto:</label>
+    <input type="text" id="textoInput">
+    <button onclick="desencriptar()">Desencriptar</button>
+
+    <div id="textoDesencriptado"></div>
+</div>
+
+<script>
+    function desencriptar() {
+        // Obter o valor inserido no campo de texto
+        var textoInserido = document.getElementById('textoInput').value;
+
+        // Armazenar o texto em uma variável JavaScript
+        var textoArmazenado = textoInserido;
+
+const stringOriginal = textoArmazenado;
+const stringA = stringOriginal.replace(/ai/g, "a");
+const stringE = stringA.replace(/enter/g, "e");
+const stringI = stringE.replace(/imes/g, "i");
+const stringO = stringI.replace(/ober/g, "o");
+const stringUd = stringO.replace(/ufat/g, "u");
+
+        // Exibir o texto na página HTML
+        var textoExibidoElement = document.getElementById('textoDesencriptado');
+        textoExibidoElement.textContent = "Texto Encriptado: " + stringUd;
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
